@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <style>
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body style="background-color: rgb(83, 86, 89)">
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-2">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button type="button" class="btn btn-primary" id="signOut">
+        Sign out
+      </button>
+    </div>
+  </nav>
+  <div class="container" id="container">
+  </div>
+  <main>
+    <section class="py-5 text-center container">
+      <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto" id="todospace">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label text-white"><b>Create Your Todo</b></label>
+            <div class="mb-3">
+              <textarea class="form-control" id="title" rows="1" placeholder="Title" id="title"></textarea>
+            </div>
+            <div id="visibilitychange" class="invisible">
+              <div class="mb-3">
+                <textarea class="form-control" rows="3" id="description" placeholder="description"></textarea>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="1" id="label" placeholder="label"></textarea>
+              </div>
+              <div class="mb-3">
+                <button class="btn btn-primary" style="padding: 10px 40px" ; id="submit">
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="album py-5" style="background-color: rgb(83, 86, 89)">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="cards"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="">
+        <div class="col-lg-6 col-md-8 mx-auto" id="todospace">
+          <label for="exampleFormControlInput1" class="form-label text-white"><b>Create Your Todo</b></label>
+          <div class="mb-3">
+            <textarea class="form-control" id="title" rows="1" placeholder="Title" id="title"></textarea>
+          </div>
+          <div id="visibilitychange" class="visible">
+            <div class="mb-3">
+              <textarea class="form-control" rows="3" id="description" placeholder="description"></textarea>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="1" id="label" placeholder="label"></textarea>
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-primary mx-auto" style="padding: 10px 40px" id="submit">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+
+  <script src="Todo.js"></script>
+</body>
+
+</html>
